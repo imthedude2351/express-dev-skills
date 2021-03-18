@@ -9,8 +9,10 @@
 </head>
 <body>
     <a href="/skills">All Skills</a>
-    <h3><%= skill.skill %></h3>
-	<h3>Complete: <%= skill.done ? 'Yes' : 'No' %></h3>
-    <a href="/skills/<%= skill.id %>/edit">Edit</a> 
+    <h1>New Skill</h1>
+        <form action="/skills" method="POST" autocomplete="off">
+        <input type="text" name="skill">
+        <button type="submit">Save Skill</button>
+    </form>
 </body>
 </html>
