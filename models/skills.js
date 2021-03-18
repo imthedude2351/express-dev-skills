@@ -22,7 +22,8 @@ const skills = [
   
   function deleteOne(id) {
     id = parseInt(id);
-    skills = skills.filter(s => s.id !== id);
+    const idx = skills.findIndex(skills => skills.id === id);
+    skills.splice(idx, 1);
   }
     
   function create(skill) {
